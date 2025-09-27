@@ -1,4 +1,5 @@
-package org.example;
+package calculator;
+
 import java.util.Stack;
 
 public class ShuntingYard {

@@ -1,3 +1,4 @@
+package stack;
 /**
  * A collection of objects that are added and removed according to the last-in
  * first-out principle. Although similar in purpose, this interface differs from

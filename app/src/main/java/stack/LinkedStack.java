@@ -1,3 +1,5 @@
+package stack;
+
 public class LinkedStack<E> implements Stack<E> {
     // ---------- Inner Node class ----------
     private static class Node<E> {
