@@ -1,31 +1,20 @@
 package app;
 
+import calculator.Calculator;
+
 public class App {
-  public String getGreeting() {
-    return "Hello World!";
-  }
-
   public static void main(String[] args) {
-    System.out.println(new App().getGreeting());
-    // Get system input
-    // Call Calculator
-    // Return output
-
-    //TODO: ACTUALLY DO THIS THIS WAS JUST SOMETHING THAT WAS GIVEN BY PROF PLEASE FIX + EDIT!!!
-    /*
     Calculator calculator = new Calculator();
- 
-    // Prints out the number 7
-    System.out.println(calculator.evaluate("2 + 5"));
- 
-    // Prints out the number 33
-    System.out.println(calculator.evaluate("3 + 6 * 5"));
- 
-    // Prints out the number 20
-    System.out.println(calculator.evaluate("4 * (2 + 3)"));
- 
-    // Prints out the number 2
-    System.out.println(calculator.evaluate("(7 + 9) / 8"));
-    */
+    String[] examples = {
+      "2 + 5",           // should print 7.0
+      "3 + 6 * 5",       // should print 33.0
+      "4 * (2 + 3)",     // should print 20.0
+      "(7 + 9) / 8",     // should print 2.0
+      "2^2^3"            // should print 256.0
+    };
+    for (String expr : examples) {
+      double result = calculator.evaluate(expr);
+      System.out.printf("%s = %s%n", expr, result);
+    }
   }
 }

@@ -1,7 +1,8 @@
+/**
 package calculator;
 
 import java.util.Stack;
-
+// Shunting yard algorithm from https://rosettacode.org/wiki/Parsing/Shunting-yard_algorithm in Java
 public class ShuntingYard {
 
     public static void main(String[] args) {
@@ -13,7 +14,7 @@ public class ShuntingYard {
     static String infixToPostfix(String infix) {
         /* To find out the precedence, we take the index of the
            token in the ops string and divide by 2 (rounding down). 
-           This will give us: 0, 0, 1, 1, 2 */
+           This will give us: 0, 0, 1, 1, 2 *//**
         final String ops = "-+/*^";
 
         StringBuilder sb = new StringBuilder();
@@ -58,4 +59,4 @@ public class ShuntingYard {
             sb.append(ops.charAt(s.pop())).append(' ');
         return sb.toString();
     }
-}
+} */

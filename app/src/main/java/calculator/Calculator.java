@@ -6,13 +6,12 @@ import java.util.List;
 import stack.LinkedStack;
 
 public class Calculator {
-    // (1) Get the string from the main function
-    // (2) Pass the string into the shunting yard fxn
-    // (3) Split the string (TODO: Find how to do so in java docs)
-    // (4) Evaluate RPN with a method Postfix(array)
-    // (5) Return result to main function
-
-	// Evaluate an infix expression and return the result as a double
+	// Evaluate an infix expression and return the result as a double.
+    // (1) Get the string from the main function.
+	// (2) Split the string.
+    // (3) Pass the split string into the Shunting Yard function.
+    // (4) Evaluate Reverse Polish Notation (RPN) with evaluatePostfix(list<string>)
+    // (6) Return result to main function
 	public double evaluate(String infix) {
 		List<String> tokens = tokenize(infix);
 		List<String> postfix = infixToPostfix(tokens);
@@ -90,7 +89,7 @@ public class Calculator {
 		return tokens;
 	}
 
-	// Infix to postfix using the provided LinkedStack implementation.
+	// Shunting-Yard infix to postfix using the LinkedStack data structure.
 	private List<String> infixToPostfix(List<String> tokens) {
 		List<String> output = new ArrayList<>();
 		LinkedStack<String> ops = new LinkedStack<>();
